@@ -1,0 +1,29 @@
+package SeleniumDeloitteDemoFacebook;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class linkedin {
+	
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		//driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin");
+		driver.get("https://in.linkedin.com/");
+		driver.manage().window().maximize();
+		//driver.findElement(By.name("session_key")).sendKeys("harish");
+		//driver.findElement(By.name("session_password")).sendKeys("harish");
+		//known as locators
+		//driver.findElement(By.cssSelector("body > nav > a.nav__button-secondary"));
+		driver.findElement(By.cssSelector("body > nav > a.nav__button-secondary")).click();
+		//driver.findElement(By.cssSelector("body > nav > section.sign-in-card.show > form > div.sign-in-form__footer > button"));
+		driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("harish@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("harish");
+		driver.findElement(By.xpath("//*[@id=\"app__container\"]/main/div/form/div[3]/button")).click();
+		
+		
+	}
+
+}

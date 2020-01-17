@@ -1,0 +1,35 @@
+package SeleniumDeloitteDemopriority;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class priority {
+	WebDriver driver;
+	
+	
+	
+	//method 1:launch chrome
+  @Test
+  public void launchGoogle() {
+	  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
+	   driver=new ChromeDriver();
+		driver.get("https://google.com");
+	  
+  }
+  
+  
+//method 2:enter linkedin  
+  @Test
+  public void Search() {
+	  driver.findElement(By.name("q")).sendKeys("linkedin");
+  }
+  
+  
+  
+  
+  
+  
+  
+}
